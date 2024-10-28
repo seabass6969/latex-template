@@ -1,0 +1,57 @@
+\documentclass[twoside]{report}
+\title{Seabass Style Sheet}
+\author{Cephas Yeung}
+\date{28/10/2024}
+\input{seabass.tex}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Introduction}
+Introduction I am Cephas
+
+\chapter{Useful packages}
+
+\section{Hyperref}
+My link to my \href{cephas.monster}{website}
+
+\section{Verbatim}
+\begin{Verbatim}[numbers=left, frame=single]
+print("hello world")
+\end{Verbatim}
+
+\section{Colour}
+I am {\color{red} red} and I am {\color{blue} blue}
+
+\section{T colour box}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=My nice heading]
+% \begin{lstlisting}[numbers=left, xleftmargin=5mm, language=python]
+% print("hello world")
+% \end{lstlisting}
+test
+\end{tcolorbox}
+\section{Code}
+\begin{minted}[bgcolor=Beige, linenos]{python3}
+print("hello world")
+test = "123"
+for i in range(1,2):
+    print(i)
+\end{minted}
+
+\section{Figures}
+\include{graphics}
+
+\section{Bibliography}
+
+I can reference Scipy \cite{2020SciPy-NMeth}
+
+\section{Footnote}
+
+I have a footnote here \footnote[1]{This is my footnote!}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}
